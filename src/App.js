@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './components/navbar';
+import Navbarthree from './components/navbarthree';
+import Navbartwo from './components/navbartwo';
+import Bottom from './components/bottom'
+import Category from './components/category';
+import ProductList from './components/product_list';
+import {BrowserRouter, Route,Routes} from 'react-router-dom';
+import ProductDetails from './components/product_details'; 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <Routes>
+    <Route path="/" element={<Ecom />} />
+    <Route path="/details/:productId" element={<ProductDetails />} />
+    <Route element={<Ecom />} />
+  </Routes>);
 }
 
-export default App;
+const Ecom = ()=>{
+  return (
+    <>
+       <Navbar/>
+      <Navbartwo/>
+      <Navbarthree/> 
+      <Category/>
+      <ProductList/>
+       <Bottom/> 
+        
+    
+    </>
+  )
+}
+
+export default App
+

@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Montyone{
+  background-color:blue;
   color: white;
+  font-family: cursive;
+  position: sticky;
 }
-
-.App-link {
-  color: #61dafb;
+#MontyTwo{
+  margin-left: 30vw;
+  width: 30vw;
+  border: 2px solid black;
+  color: black;
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.heading{
+  margin-left: 180px;
+  font-size: 40px;
+  
+}
+.hellobutton{
+  margin-left: 150px;
+  width: 100px;
+  background-color: white;
+  color: blue;
+}
+.marginmore{
+  margin-left: 88vw;
+  margin-top: -25px;
+}
+.cssgrid{
+  display: grid;
+  grid-template-columns: 11% 11% 11% 11% 11% 11% 11% 11% 11% ;
+  position:sticky;
+  height: 60px;
+  
+}
+.navbarthree{
+  background-color: blue;
+  color: white;
+  height: 60px;
+  font-family: fantasy;
+  position: sticky;
+}
+#Newyear{
+  margin-left: 40vw;
+}
+.bodydivison{
+  background-color: white ;
+  color: black;
+  font-family: cursive;
+}
+#buttonview{
+  margin-left: 80vw;
+  width: 150px;
+  background-color: blue;
+  color: white;
+  margin-top: -100px;
+}
+#searchkro{
+  background-color: black;
+  color: white;
+  box-shadow: 2px 2px 2px blue;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  #appliances:hover{
+    display: block;
+    height: 45vh;
+    width: 20vw;
+    background-color: rgb(18, 18, 19);
+    position: relative;
+    color:white;
+    z-index: 1;
+    opacity: 0.4;
+    }
+#appliancesdevice:hover{
+   display: block;
+    height: 45vh;
+    width: 20vw;
+    background-color: rgb(19, 19, 20);
+    position: relative;
+    color: white;
+    z-index: 1;
+    opacity: 0.4;
+}
+.bodyofapp{
+  margin-top: 10px;
+}
+.bodydropdown{
+  margin-left: 30vw;
+}
+.montyproduct{
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 33vw 33vw 33vw;
+  grid-row: 40vh 40vh 40vh;
+  
+}
+.Buttonaction{
+  color: black;
+  font-weight: 300;
+}
+.action{
+  
+  background-color:black ;
+}
+.bottomfooter{
+  height: 20vh;
+  background-color: black;
+  color: white;
+  font-size: large;
+  font-weight: 500;
+}
+#Projectanimation{
+  margin-left: 40vw; 
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0%   {right:0px; }
+  100%  { color:red ;left:0px; }
 }
