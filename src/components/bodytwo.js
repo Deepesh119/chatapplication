@@ -1,6 +1,5 @@
 import React from 'react';
-import {useState,useEffect} from 'react';
-import { FetchApi,FetchData } from '../api/api';
+import {useState} from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -11,21 +10,19 @@ const Bodytwo = () => {
     const [list,setList]= useState([])
 
    const GetData = async()=>{
-       const response = await FetchApi('https://aveosoft-react-assignment.herokuapp.com/products')
+       const response = await axios.get(`https://aveosoft-react-assignment.herokuapp.com/products`)
        setList(response.data)
-       console.log(list)
+       //console.log(list)
     }
-    useEffect(()=>{
-         GetData();
-    },[])
+   GetData();
+  
     
     return (
        <>
-               
-     <div className='montyproduct'>
-        {  list && list.map((val)=>{
+       <div className='montyproduct'>
+        { list && list.map((val)=>{
            return(
-                <>
+             <>
               <div className='FlexCard'>
                 <Card sx={{marginTop:5,border:2,maxWidth: 400 ,maxHeight:600,backgroundColor:"gray",color:"black"}}>
                  <CardContent>
@@ -53,7 +50,7 @@ const Bodytwo = () => {
                 </CardActions>
                </Card>
                 </div>
-               </>
+             </>
             )})}
      </div>
        </> 
